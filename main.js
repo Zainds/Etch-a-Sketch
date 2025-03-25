@@ -13,7 +13,8 @@ drawGrid(17)
 container.addEventListener("mouseover", (event) => {
     const target = event.target
     if(target.className == 'box'){
-        target.style.background = 'gray'
+        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+        target.style.background = randomColor
     }
 })
 resetBtn.addEventListener('click', () => {
