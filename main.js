@@ -6,6 +6,7 @@ const gridSize = 800
 
 div.style.border = "1px solid black"
 div.className = "box"
+div.style.background = "white"
 
 rowDiv.style.display = 'flex'
 
@@ -13,8 +14,15 @@ drawGrid(17)
 container.addEventListener("mouseover", (event) => {
     const target = event.target
     if(target.className == 'box'){
-        const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
-        target.style.background = randomColor
+        if(target.style.background == 'white'){
+            const randomColor = '#' + Math.floor(Math.random()*16777215).toString(16)
+            target.style.background = randomColor
+            target.style.opacity = 1
+            
+        }else{
+            target.style.opacity -= 0.1
+        }
+        
     }
 })
 resetBtn.addEventListener('click', () => {

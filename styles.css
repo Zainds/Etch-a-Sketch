@@ -12,6 +12,7 @@ body{
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
+    background-color: black;
 
 }
 button{
