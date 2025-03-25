@@ -4,6 +4,7 @@ const div = document.createElement('div')
 div.style.border = "2px solid black"
 div.style.width = "30px"
 div.style.height = "30px"
+div.className = "box"
 
 const rowDiv = document.createElement('div')
 rowDiv.style.display = 'flex'
@@ -18,3 +19,9 @@ for(let i = 0; i < 16; i ++){
     }
     
 }
+container.addEventListener("mouseover", (event) => {
+    const target = event.target
+    if(target.className == 'box'){
+        target.style.background = 'gray'
+    }
+})
